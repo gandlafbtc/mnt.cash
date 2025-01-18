@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Button from '$lib/components/ui/button/button.svelte';
+	import { Github, Pen } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 
 	const m = [
@@ -94,7 +96,7 @@
 </script>
 
 <div
-	class=" flex h-64 w-96 items-center justify-center rounded-lg border border-white bg-black bg-opacity-40 backdrop-blur-sm"
+	class=" flex flex-col gap-5 h-64 w-96 items-center justify-center rounded-lg border border-white bg-black bg-opacity-40 backdrop-blur-sm"
 >
 	<div class="grid w-80 grid-cols-3">
 		<p class="flex items-center justify-center text-7xl font-bold">M</p>
@@ -104,4 +106,9 @@
 		<p class="flex w-full items-center justify-center">{currentN}</p>
 		<p class="flex w-full items-center justify-center">{currentT}</p>
 	</div>
+	<p> 
+		<Button class='rounded-full' href='https://github.com/gandlafbtc/mint'>
+			<Github></Github>
+		</Button>
+	</p>
 </div>
